@@ -24,9 +24,6 @@
                         placeholder="loan amount"
                         required="true">
 					</td>
-					<td>
-            <!-- place holder for return data  -->
-					</td>
 				</tr>
 				<!-- row 2 -->
         <tr>
@@ -40,9 +37,6 @@
                         value="0.07"
                         placeholder="enter decimal # ex.:7% = 0.07"
                         required="true">
-					</td>
-					<td>
-            <!-- place holder for return data  -->
 					</td>
 				</tr>
         <!-- row 3 -->
@@ -58,13 +52,41 @@
 												placeholder="loan duration"
                         required="true">
 					</td>
-					<td>
-            <!-- place holder for return data  -->
-					</td>
 				</tr>
 			</table>
 			<input type="submit" name="name" value="">
 		</form>
+
+		<!--- Result Data ------------>
+		<table class=infoOutput>
+			<!--  row 1 -->
+			<tr>
+				<td>
+					Monthly Payment:
+				</td>
+				<td id="paymentResult">
+					<!-- insert monthly payment data -->
+				</td>
+			</tr>
+			<!-- row 2  -->
+			<tr>
+				<td>
+					Total Paid:
+				</td>
+				<td id="totalPaidResult">
+					<!--  insert Total amount paid-->
+				</td>
+			</tr>
+			<!-- row 3 -->
+			<tr>
+				<td>
+					Total interest paid:
+				</td>
+				<td id="totalInterestResult">
+					<!-- insert total interest paid -->
+				</td>
+			</tr>
+		</table>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>

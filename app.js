@@ -70,14 +70,25 @@ function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilo
 $(document).ready(function() {
   $("#loanTerms").on("submit", function(event) {
     event.preventDefault();
+    // grab user input data
     var amount = parseInt($(this).find('#amountInput').val());
-    var apr = parseInt($(this).find('#aprInput').val());
+    var apr = parseFloat($(this).find('#aprInput').val());
     var time = parseInt($(this).find('#timeInput').val());
+
     console.log(amount, apr, time);
     console.log(typeof amount, typeof apr, typeof time);
-    findMonthlyPayment(amount, apr, time, 100);
-    findMonthlyPayment(16000, 0.07, 3, 100);
+    // find monthly payment and store results in variable
+    var results = findMonthlyPayment(amount, apr, time, 100);
+    console.log(results);;
+
+    // parse results and display on web page
+    $("#paymentResult").append(results[0]);
+    $("#totalPaidResult").append(results[1]);
+    $("#totalInterestResult").append(results[2]);
+
     });
+
+
 });
 
 // the code below has variable names are that are the same as the one inside

@@ -70,12 +70,13 @@ function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilo
 $(document).ready(function() {
   $("#loanTerms").on("submit", function(event) {
     event.preventDefault();
-    var totalLoanAmount = $(this).find('#amountInput').val();
-    var aprPercentage = $(this).find('#aprInput').val();
-    var loanDuration = $(this).find('#timeInput').val();
-    console.log(totalLoanAmount, aprPercentage, loanDuration);
-    // findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, 100);
-    // findMonthlyPayment(16000, 0.07, 3, 100);
+    var amount = parseInt($(this).find('#amountInput').val());
+    var apr = parseInt($(this).find('#aprInput').val());
+    var time = parseInt($(this).find('#timeInput').val());
+    console.log(amount, apr, time);
+    console.log(typeof amount, typeof apr, typeof time);
+    findMonthlyPayment(amount, apr, time, 100);
+    findMonthlyPayment(16000, 0.07, 3, 100);
     });
 });
 

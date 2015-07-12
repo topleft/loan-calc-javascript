@@ -8,14 +8,16 @@
   <header>
 
   </header>
+	<div class="body">
 	<body>
-		<form id="loanTerms" action="index.html" method="post">
+		<form class="form" id="loanTerms" action="index.html" method="post">
+			<p class="table-title">Loan Terms</p>
 			<table>
 			<!-- row 1 -->
       	<tr>
-          </td>
-          Loan Amount:
           <td>
+          Loan Amount:
+					</td>
 					<td>
 					       <input id="amountInput"
 												type="number"
@@ -27,9 +29,9 @@
 				</tr>
 				<!-- row 2 -->
         <tr>
-          </td>
-          APR%:
           <td>
+          APR%:
+				  </td>
 					<td>
 					       <input id="aprInput"
 												type="number"
@@ -41,9 +43,9 @@
 				</tr>
         <!-- row 3 -->
 				<tr>
-          </td>
-          Loan Duration:
           <td>
+          Loan Duration:
+				  </td>
 					<td>
 					       <input id="timeInput"
 												type="number"
@@ -54,41 +56,49 @@
 					</td>
 				</tr>
 			</table>
-			<input type="submit" name="name" value="">
+			<button type="submit" name="button">submit</button>
+			<!-- <input class="button" type="submit" name="name" value=""> -->
 		</form>
 
 		<!--- Result Data ------------>
-		<table class=infoOutput>
-			<!--  row 1 -->
-			<tr>
-				<td>
-					Monthly Payment:
-				</td>
-				<td id="paymentResult">
-					<!-- insert monthly payment data -->
-				</td>
-			</tr>
-			<!-- row 2  -->
-			<tr>
-				<td>
-					Total Paid:
-				</td>
-				<td id="totalPaidResult">
-					<!--  insert Total amount paid-->
-				</td>
-			</tr>
-			<!-- row 3 -->
-			<tr>
-				<td>
-					Total interest paid:
-				</td>
-				<td id="totalInterestResult">
-					<!-- insert total interest paid -->
-				</td>
-			</tr>
-		</table>
+
+		<div class="form">
+			<p class="table-title">Loan Results</p>
+			<table class="info-output">
+				<!--  row 1 -->
+				<tr>
+					<td>
+						Mo. Payment:
+					</td>
+					<td id="paymentResult">
+						<!-- insert monthly payment data -->
+					</td>
+				</tr>
+				<!-- row 2  -->
+				<tr>
+					<td>
+						Total Paid:
+					</td>
+					<td id="totalPaidResult">
+						<!--  insert Total amount paid-->
+					</td>
+				</tr>
+				<!-- row 3 -->
+				<tr>
+					<td>
+						Total interest:
+					</td>
+					<td id="totalInterestResult">
+						<!-- insert total interest paid -->
+					</td>
+				</tr>
+			</table>
+		</div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>
+		</div>
+		<footer></footer>
 	</body>
+
 </html>

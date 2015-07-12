@@ -1,0 +1,137 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, rem, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, rembed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END MEYER RESET */
+
+/*--------------------------------------------------------*/
+
+/* General Styles */
+.body {
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
+}
+/* header styles */
+
+/* form styles */
+
+.table-title {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.form {
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  color: rgb(100,100,100);
+  font-size: 2rem;
+
+}
+
+.form td {
+  width: 44%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.form input {
+  text-align: center;
+  color: rgb(100,100,100);
+  width: 100%;
+  height: 2.25rem;
+  font-size: 1rem;
+  border-color: rgba(100,170,180,.3);
+  border-radius: .2rem;
+}
+
+button {
+  margin: 2rem;
+  width: 40%;
+  height: 3rem;
+  font-size: .75rem;
+  color: rgb(100,170,180);
+  background-color: rgb(230,230,230);
+  box-shadow: inset 0rem 0rem .4rem .3rem rgb(180,180,180);
+  border: none;
+  border-radius: 1rem;
+
+}
+
+/* Results Styles */
+
+.info-output td {
+  height: 2.6rem;
+
+}
+
+/* table border */
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-top: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
+
+/* footer */
+
+footer {
+  bottom: 0;
+  left: 0;
+  padding: 3rem;
+  margin-top: 8rem;
+  background-color: rgb(230,230,230);
+  width: 100%;
+
+}

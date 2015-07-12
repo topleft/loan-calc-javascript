@@ -20,10 +20,10 @@
 					</td>
 					<td>
 					       <input id="amountInput"
-												type="number"
+												type="text"
                         name="totalLoanAmount"
-                        value="16000"
-                        placeholder="loan amount"
+                        value="1000"
+                        placeholder="$"
                         required="true">
 					</td>
 				</tr>
@@ -34,10 +34,10 @@
 				  </td>
 					<td>
 					       <input id="aprInput"
-												type="number"
+												type="text"
                         name="aprPercentage"
-                        value="0.07"
-                        placeholder="enter decimal # ex.:7% = 0.07"
+                        value="0.05"
+                        placeholder="7% = 0.07"
                         required="true">
 					</td>
 				</tr>
@@ -48,10 +48,10 @@
 				  </td>
 					<td>
 					       <input id="timeInput"
-												type="number"
+												type="text"
                         name="loanDuration"
-                        value="3"
-												placeholder="loan duration"
+                        value="2"
+												placeholder="years"
                         required="true">
 					</td>
 				</tr>
@@ -64,13 +64,13 @@
 
 		<div class="form">
 			<p class="table-title">Loan Results</p>
-			<table class="info-output">
+			<table id="results-table" class="info-output">
 				<!--  row 1 -->
 				<tr>
 					<td>
 						Mo. Payment:
 					</td>
-					<td id="paymentResult">
+					<td id="paymentResult" class="result">
 						<!-- insert monthly payment data -->
 					</td>
 				</tr>
@@ -79,16 +79,16 @@
 					<td>
 						Total Paid:
 					</td>
-					<td id="totalPaidResult">
+					<td id="totalPaidResult" class="result">
 						<!--  insert Total amount paid-->
 					</td>
 				</tr>
 				<!-- row 3 -->
 				<tr>
 					<td>
-						Total interest:
+						Total Interest:
 					</td>
-					<td id="totalInterestResult">
+					<td id="totalInterestResult" class="result">
 						<!-- insert total interest paid -->
 					</td>
 				</tr>

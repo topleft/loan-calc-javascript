@@ -68,8 +68,11 @@ function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilo
 
 
 $(document).ready(function() {
+  var submitted = false;
   $("#loanTerms").on("submit", function(event) {
     event.preventDefault();
+    console.log(submitted);
+
     // grab user input data
     var amount = parseInt($(this).find('#amountInput').val());
     var apr = parseFloat($(this).find('#aprInput').val());
@@ -81,10 +84,17 @@ $(document).ready(function() {
     var results = findMonthlyPayment(amount, apr, time, 100);
     console.log(results);;
 
+    // clear the previous results from output table
+    if (submitted) {
+      $('#results-table').find(".result").empty();
+    };
     // parse results and display on web page
-    $("#paymentResult").append(results[0]);
-    $("#totalPaidResult").append(results[1]);
-    $("#totalInterestResult").append(results[2]);
+    $("#paymentResult").append('<span>$ '+results[0]+'</span>');
+    $("#totalPaidResult").append('<span>$ '+results[1]+'</span>');
+    $("#totalInterestResult").append('<span>$ '+results[2]+'</span>');
+
+    submitted = true;
+    console.log(submitted);
 
     });
 

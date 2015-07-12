@@ -112,6 +112,11 @@ button {
 
 }
 
+td.result {
+	text-align: right;
+	color: rgb(90,160,170);
+}
+
 /* table border */
 
 table {

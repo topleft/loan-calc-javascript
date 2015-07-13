@@ -88,6 +88,7 @@ $(document).ready(function() {
     if (submitted) {
       $('#results-table').find(".result").empty();
     };
+
     // parse results and display on web page
     $("#paymentResult").append('<span>$ '+results[0]+'</span>');
     $("#totalPaidResult").append('<span>$ '+results[1]+'</span>');
@@ -114,13 +115,3 @@ $(document).ready(function() {
 //     findMonthlyPayment(16000, 0.07, 3, 100);
 //     });
 // });
-
-// findMonthlyPayment (16000, 0.07, 3, 100);
-
-// return array and loop through array to retreive values
-
-// values needed:
-//    monthly payment amount
-//    total paid
-//    interest paid
-//

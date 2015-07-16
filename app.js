@@ -42,8 +42,6 @@ function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilo
 
 
     else if (balance < epsilon) {
-      // console.log(balance);
-      // console.log("Guess too high: "+monthlyPaymentGuess);
       hiGuess = monthlyPaymentGuess;
       monthlyPaymentGuess = (hiGuess + lowGuess)/2
       totalPaid = 0;
@@ -53,8 +51,6 @@ function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilo
       }
     }
     else if (balance > epsilon) {
-      // console.log(balance);
-      // console.log("Guess too low: "+monthlyPaymentGuess);
       lowGuess = monthlyPaymentGuess;
       monthlyPaymentGuess = (hiGuess + lowGuess)/2
       totalPaid = 0;
@@ -80,8 +76,10 @@ $(document).ready(function() {
 
     console.log(amount, apr, time);
     console.log(typeof amount, typeof apr, typeof time);
+
     // find monthly payment and store results in variable
     var results = findMonthlyPayment(amount, apr, time, 100);
+
     console.log(results);;
 
     // clear the previous results from output table
@@ -101,17 +99,3 @@ $(document).ready(function() {
 
 
 });
-
-// the code below has variable names are that are the same as the one inside
-// the main function, is this going to be bad?
-// $(document).ready(function() {
-//   $("#loanTerms").on("submit", function(event) {
-//     event.preventDefault();
-//     var totalLoanAmount = $(this).find('#amountInput').val();
-//     var aprPercentage = $(this).find('#aprInput').val();
-//     var loanDuration = $(this).find('#timeInput').val();
-//     console.log(totalLoanAmount, aprPercentage, loanDuration);
-//     findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, 100);
-//     findMonthlyPayment(16000, 0.07, 3, 100);
-//     });
-// });

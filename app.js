@@ -8,6 +8,56 @@
 //    loanDuration = int, time in years
 //    epsilon = int, dollar amount degree of accuracy
 
+
+// attempting to refactor
+
+// function createMonthlyPaymentGuess (hiGuess, lowGuess, currentGuess, balance, epsilon){
+
+//   if (Math.abs(balance) <= epsilon) {
+//       return parseFloat((monthlyPaymentGuess).toFixed(2));
+//       }
+
+
+//     else if (balance < epsilon) {
+//       hiGuess = currentGuess;
+//       currentGuess = (hiGuess + lowGuess)/2
+//       totalPaid = 0;
+//         // Checking for stale mate in payment guess calculation
+//         if (Math.abs(lowGuess-currentGuess) < 1) {
+//           currentGuess -= 100;
+//       }
+//     }
+//     else if (balance > epsilon) {
+//       lowGuess = currentGuess;
+//       currentGuess = (hiGuess + lowGuess)/2
+//       totalPaid = 0;
+//         // Checking for stale mate in payment guess calculation
+//         if (Math.abs(lowGuess-currentGuess) < 1) {
+//           currentGuess += 100;
+//         }
+//   return currentGuess;
+// };
+
+// function calcTotalPaid () {};
+
+// function calcTotalInterestPaid() {};
+
+// function aprToMonthly(apr){
+//   var monthlyPercentage = apr/12.0;
+//   return monthlyPercentage;
+// };
+
+// function calculateFinalBalance(balance, months, guess, monthlyPercentRate){
+
+//   for (var i = 0; i < months; i++) {
+//     balance += (balance * monthlyPercentage);
+//     balance -= monthlyPaymentGuess;
+//     totalPaid += monthlyPaymentGuess;
+//   }
+//   return balance;
+// };
+
+
 function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilon) {
   var monthlyPercentage = aprPercentage/12;
   var months = loanDuration * 12;
@@ -16,7 +66,6 @@ function findMonthlyPayment(totalLoanAmount, aprPercentage, loanDuration, epsilo
   var hiGuess = ((balance*aprPercentage)+balance)/months;
   var lowGuess = balance/months;
   var monthlyPaymentGuess = (hiGuess+lowGuess)/2;
-  // console.log("Hi low Guess: "+lowGuess+","+hiGuess);
 
 
   while(Math.abs(balance) >= epsilon) {
